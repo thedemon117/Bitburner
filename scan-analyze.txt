@@ -11,7 +11,6 @@ n00dles
  
 > foodnstuff
 --Root Access: NO, Required hacking skill: 1
- 
 --Number of open ports required to NUKE: 0
 --RAM: 16.00GB
  
