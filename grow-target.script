@@ -4,6 +4,6 @@ var target = args[0]
 var sleep_time = args[1]
 // Infinite loop that continously hacks/grows/weakens the target server
 while(true) {
-        hack(target);
+        grow(target);
         sleep(sleep_time);
 }
