@@ -1,9 +1,0 @@
-// Defines the "target server", which is the server
-// by passing the first agrument to it - hack-target.script [server name]
-var target = args[0]
-var sleep_time = args[1]
-// Infinite loop that continously hacks/grows/weakens the target server
-while(true) {
-        grow(target);
-        sleep(sleep_time);
-}
