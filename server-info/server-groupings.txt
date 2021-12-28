@@ -87,8 +87,7 @@ ram32GBs:
         "omega-net",
         "millenium-fitness",
         "I.I.I.I",
-        "netlink",
-        "univ-energy"];
+        "netlink"];
 
 ram64GBs:
         ["the-hub", 
@@ -97,11 +96,13 @@ ram64GBs:
         "rho-construction",
         "avmnite-02h",
         "unitalife",
-        "omnia"];
+        "omnia",
+        "summit-uni"];
 
 ram128GBs:
         ["rothman-uni",
         "lexo-corp",
-        alpha-ent"];
+        "alpha-ent",
+        "univ-energy"];
 
 //Ideally MaxRam would be determined by a script and set to run max threads
