@@ -1,0 +1,10 @@
+// This script runs multiple scripts against a target
+// Ideally shortening the cycle between
+// grow - weaken - hack on the target
+
+var target = args[0];
+
+// Iterate through a range based on ram available
+// for i in range: run grow weaken hack scripts
+// n times to max out available threads on a target
+
