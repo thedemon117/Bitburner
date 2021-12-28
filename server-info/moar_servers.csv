@@ -1,49 +1,49 @@
-# servername,hacklevel,portsToNuke,RAM
-n00dles, 1,0,"4.00GB"
-max-hardware, 80,1,"32.00GB"
-foodnstuff, 1,0,"16.00GB"
-sigma-cosmetics, 5,0,"16.00GB"
-joesguns, 10,0,"16.00GB"
-CSEC, 54,1,"8.00GB"
-neo-net, 50,1,"32.00GB"
-the-hub, 280,2,"64.00GB"
-summit-uni, 428,3,"64.00GB"
-catalyst, 430,3,"64.00GB"
-millenium-fitness, 524,3,"32.00GB"
-silver-helix, 150,2,"64.00GB"
-comptek, 382,3,"0.00GB"
-rothman-uni, 429,3,"128.00GB"
-I.I.I.I, 347,3,"32.00GB"
-rho-construction, 522,3,"64.00GB"
-aerocorp, 897,5,"0.00GB"
-deltaone, 866,5,"0.00GB"
-defcomm, 916,5,"0.00GB"
-unitalife, 817,4,"64.00GB"
-icarus, 889,5,"0.00GB"
-zb-def, 806,4,"0.00GB"
-univ-energy, 878,4,"32.00GB"
-infocomm, 943,5,"0.00GB"
-nova-med, 838,4,"0.00GB"
-johnson-ortho, 273,2,"0.00GB"
-crush-fitness, 261,2,"0.00GB"
-avmnite-02h, 217,2,"64.00GB"
-syscore, 606,4,"0.00GB"
-phantasy, 100,2,"32.00GB"
-hong-fang-tea, 30,0,"16.00GB"
-nectar-net, 20,0,"16.00GB"
-harakiri-sushi, 40,0,"16.00GB"
-iron-gym, 100,1,"32.00GB"
-zer0, 75,1,"32.00GB"
-omega-net, 215,2,"32.00GB"
-netlink, 381,3,"32.00GB"
-zb-institute, 735,5,"32.00GB"
-lexo-corp, 678,4,"128.00GB"
-global-pharm, 822,4,"16.00GB"
-omnia, 925,5,"64.00GB"
-solaris, 814,5,"32.00GB"
-zeus-med, 810,5,"0.00GB"
-taiyang-digital, 850,5,"0.00GB"
-snap-fitness, 794,4,"0.00GB"
-alpha-ent, 534,4,"128.00GB"
-aevum-police, 440,4,"16.00GB"
-galactic-cyber, 838,5,"0.00GB"
+# servername,hacklevel,portsToNuke,RAM,RAM_num
+comptek,382,3,0.00GB,0
+aerocorp,897,5,0.00GB,0
+deltaone,866,5,0.00GB,0
+defcomm,916,5,0.00GB,0
+icarus,889,5,0.00GB,0
+zb-def,806,4,0.00GB,0
+infocomm,943,5,0.00GB,0
+nova-med,838,4,0.00GB,0
+johnson-ortho,273,2,0.00GB,0
+crush-fitness,261,2,0.00GB,0
+syscore,606,4,0.00GB,0
+zeus-med,810,5,0.00GB,0
+taiyang-digital,850,5,0.00GB,0
+snap-fitness,794,4,0.00GB,0
+galactic-cyber,838,5,0.00GB,0
+n00dles,1,0,4.00GB,4
+CSEC,54,1,8.00GB,8
+foodnstuff,1,0,16.00GB,16
+sigma-cosmetics,5,0,16.00GB,16
+joesguns,10,0,16.00GB,16
+hong-fang-tea,30,0,16.00GB,16
+nectar-net,20,0,16.00GB,16
+harakiri-sushi,40,0,16.00GB,16
+global-pharm,822,4,16.00GB,16
+aevum-police,440,4,16.00GB,16
+max-hardware,80,1,32.00GB,32
+neo-net,50,1,32.00GB,32
+millenium-fitness,524,3,32.00GB,32
+I.I.I.I,347,3,32.00GB,32
+univ-energy,878,4,32.00GB,32
+phantasy,100,2,32.00GB,32
+iron-gym,100,1,32.00GB,32
+zer0,75,1,32.00GB,32
+omega-net,215,2,32.00GB,32
+netlink,381,3,32.00GB,32
+zb-institute,735,5,32.00GB,32
+solaris,814,5,32.00GB,32
+the-hub,280,2,64.00GB,64
+summit-uni,428,3,64.00GB,64
+catalyst,430,3,64.00GB,64
+silver-helix,150,2,64.00GB,64
+rho-construction,522,3,64.00GB,64
+unitalife,817,4,64.00GB,64
+avmnite-02h,217,2,64.00GB,64
+omnia,925,5,64.00GB,64
+rothman-uni,429,3,128.00GB,128
+lexo-corp,678,4,128.00GB,128
+alpha-ent,534,4,128.00GB,128
