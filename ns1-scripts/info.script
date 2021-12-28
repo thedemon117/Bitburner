@@ -1,0 +1,28 @@
+// interogate server v1
+// Inspired by https://www.youtube.com/watch?v=zPBdjTAB254
+target = args[0];
+
+print ("Target Server: " + target);
+
+maxMoney = getServerMaxMoney(target);
+availMoney = getServerMoneyAvailable(target);
+secThresh = getServerMinSecurityLevel(target);
+currentSec = getServerSecurityLevel(target);
+targetMaxRam = getServerMaxRam(target);
+targetUsedRam = getServerUsedRam(target);
+t_hackTime = getHackTime(target);
+t_growTime = getGrowTime(target);
+t_weakenTime = getWeakenTime(target);
+
+
+//print ("Max Money: " + maxMoney);
+//print ("Current Money: " + availMoney);
+//print ("Min Security Level: " + secThresh);
+//print ("Current Security level: " + currentSec);
+//print ("Max RAM: "+ targetMaxRam + "GB");
+//print ("Used RAM: "+ targetUsedRam + "GB");
+print ("Grow Time: " + t_growTime/6000 + "sec");
+print ("Weaken Time: " + t_weakenTime/6000 + "sec");
+print ("Hack Time: " + t_hackTime/6000 + "sec");
+
+sleep(30000)

@@ -1,48 +1,107 @@
 //This is based off my current save
 servers0port:
-        ["n00dles",
-        "foodnstuff",
+        ["n00dles", //4GB
+        "foodnstuff", //16GB
+        "sigma-cosmetics", //16GB
+        "joesguns", //16GB
+        "hong-fang-tea", //16GB
+        "nectar-net", //16GB
+        "harakiri-sushi"]; //16GB
+        
+servers1port:
+        ["max-hardware", //32GB
+        "CSEC", //8GB
+        "neo-net", //32GB
+        "iron-gym", //32GB
+        "zer0"]; //32GB
+        
+servers2port:
+        ["the-hub", //64GB
+        "silver-helix", //64GB
+        "johnson-ortho", //0GB
+        "crush-fitness", //0GB
+        "avmnite-02h", //64GB
+        "phantasy", //32GB
+        "omega-net"]; //32GB
+        
+servers3port:
+        ["summit-uni", //64GB
+        "catalyst", //64GB
+        "millenium-fitness", //32GB
+        "comptek", //0GB
+        "rothman-uni", //128GB
+        "I.I.I.I", //32GB
+        "rho-construction", //64GB
+        "netlink"]; //32GB
+        
+servers4port:
+        ["syscore", //0GB
+        "lexo-corp", //128GB
+        "global-pharm", //16GB
+        "snap-fitness", //0GB
+        "alpha-ent", //128GB
+        "aevum-police", //16GB
+        "unitalife", //64GB
+        "zb-def", //0GB
+        "univ-energy", //32GB
+        "nova-med"]; //0GB
+
+//servers by RAM
+
+ram0GBs:
+        ["syscore",
+        "crush-fitness",
+        "comptek",
+        "zb-def",
+        "snap-fitness",
+        "aerocorp",
+        "deltaone",
+        "defcomm",
+        "icarus",
+        "infocomm",
+        "nova-med",
+        "johnson-orth",
+        "zeus-med",
+        "taiyang-digital",
+        "galactic-cyber"];
+
+ram4GBs:
+        ["n00dles"];
+ram8GBs:
+        ["CSEC"];
+ram16GBs:
+        ["foodnstuff",
         "sigma-cosmetics",
         "joesguns",
         "hong-fang-tea",
         "nectar-net",
-        "harakiri-sushi"];
-        
-servers1port:
+        "harakiri-sushi",
+        "global-pharm",
+        "aevum-police"];
+ram32GBs:
         ["max-hardware",
-        "CSEC",
         "neo-net",
         "iron-gym",
-        "zer0"];
-        
-servers2port:
-        ["the-hub",
-        "silver-helix",
-        "johnson-ortho",
-        "crush-fitness",
-        "avmnite-02h",
+        "zer0",
         "phantasy",
-        "omega-net"];
-        
-servers3port:
-        ["summit-uni",
-        "catalyst",
+        "omega-net",
         "millenium-fitness",
-        "comptek",
-        "rothman-uni",
         "I.I.I.I",
+        "netlink",
+        "univ-energy"];
+
+ram64GBs:
+        ["the-hub", 
+        "catalyst",
+        "silver-helix",
         "rho-construction",
-        "netlink"];
-        
-servers4port:
-        ["syscore",
-        "lexo-corp",
-        "global-pharm",
-        "snap-fitness",
-        "alpha-ent",
-        "aevum-police",
+        "avmnite-02h",
         "unitalife",
-        "zb-def",
-        "univ-energy",
-        "nova-med"];
-        
+        "omnia"];
+
+ram128GBs:
+        ["rothman-uni",
+        "lexo-corp",
+        alpha-ent"];
+
+//Ideally MaxRam would be determined by a script and set to run max threads
