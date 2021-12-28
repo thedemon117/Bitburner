@@ -1,0 +1,27 @@
+var servers = 
+        ["summit-uni",
+        "catalyst",
+        "millenium-fitness",
+        "comptek",
+        "rothman-uni",
+        "I.I.I.I",
+        "rho-construction",
+        "netlink",
+        "syscore",      //start of 4 ports
+        "lexo-corp",
+        "global-pharm",
+        "snap-fitness",
+        "alpha-ent",
+        "aevum-police",
+        "unitalife",
+        "zb-def",
+        "univ-energy",
+        "nova-med"];
+
+for (var i = 0; i < servers.length; ++i) {
+    var serv = servers[i];
+    
+    killall(serv)
+    scp(script_name, serv);
+    exec(script_name, serv, 6);
+}
