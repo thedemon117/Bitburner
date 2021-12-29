@@ -1,0 +1,23 @@
+run hackthis.script helios; run hackthis.script stormtech; run hackthis.script kuai-gong; run hackthis.script nwo; run hackthis.script fulcrumassets; run hackthis.script The-Cave; run hackthis.script .; run hackthis.script b-and-a; run hackthis.script ecorp; run hackthis.script clarkinc; run hackthis.script megacorp;
+
+Running script with 1 thread(s), pid 662 and args: ["helios"].
+
+Running script with 1 thread(s), pid 663 and args: ["stormtech"].
+
+Running script with 1 thread(s), pid 664 and args: ["kuai-gong"].
+
+Running script with 1 thread(s), pid 665 and args: ["nwo"].
+
+Running script with 1 thread(s), pid 666 and args: ["fulcrumassets"].
+
+Running script with 1 thread(s), pid 667 and args: ["The-Cave"].
+
+Running script with 1 thread(s), pid 668 and args: ["."].
+
+Running script with 1 thread(s), pid 669 and args: ["b-and-a"].
+
+Running script with 1 thread(s), pid 670 and args: ["ecorp"].
+
+Running script with 1 thread(s), pid 671 and args: ["clarkinc"].
+
+Running script with 1 thread(s), pid 672 and args: ["megacorp"].
