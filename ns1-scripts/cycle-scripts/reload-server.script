@@ -17,6 +17,7 @@ var iters = (getServerMaxRam(serv) - getServerUsedRam(serv))/9;
 var hackTools = ["target-weaken.script","target-grow.script","target-hack.script"];
 
 // Clears up all running scripts on the server
+// Don't run on home - it kills the script before running the loop
 killall(serv);
 
 // Secure copy the tools in the array above to the intended server,
