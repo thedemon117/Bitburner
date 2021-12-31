@@ -1,0 +1,61 @@
+// fast-start.script v1
+// Chage script load from monolithic script to Cycle scripts
+// Array of all servers that don't need any ports opened
+// to gain root access. These have 16 GB of RAM
+var target = args[0];
+
+var servers0Port = ["n00dles",
+                    "sigma-cosmetics",
+                    "joesguns",
+                    "foodnstuff",
+                    "nectar-net",
+                    "hong-fang-tea",
+                    "harakiri-sushi"];
+
+// Array of all servers that only need 1 port opened
+// to gain root access. These have 32 GB of RAM
+var servers1Port = ["neo-net",
+                    "zer0",
+                    "max-hardware",
+                    "iron-gym",
+                    "CSEC"];
+
+var servers2Port = ["omega-net",
+                    "silver-helix",
+                    "the-hub",
+                    "phantasy",
+                    "avmnite-02h",
+                    "crush-fitness",
+                    "johnson-ortho"];
+
+// Copy our scripts onto each server that requires 0 ports
+// to gain root access. Then use nuke() to gain admin access and
+// run the scripts.
+for (var i = 0; i < servers0Port.length; ++i) {
+    var serv = servers0Port[i];
+
+    scp("hack-template.script", serv);
+    nuke(serv);
+    exec("hack-template.script", serv, 6,target, i);
+}
+
+// Wait until we acquire the "BruteSSH.exe" program
+//while (!fileExists("BruteSSH.exe")) {
+//    sleep(60000);
+//}
+//while (!fileExists("FTPCrack.exe")) {
+//    sleep(60000);
+//}
+
+
+// Copy our scripts onto each server that requires 1 port
+// to gain root access. Then use brutessh() and nuke()
+// to gain admin access and run the scripts.
+for (var i = 0; i < servers1Port.length; ++i) {
+    var serv = servers1Port[i];
+
+    scp("hack-template.script", serv);
+    brutessh(serv);
+    nuke(serv);
+    exec("hack-template.script", serv, 12, target, i);
+}

@@ -1,11 +1,13 @@
 var serv = args[0];
 var target = args[1];
-var iters = args[2];
+var threadNum = args[2];
+
+var iters = getServerMaxRam(serv)/5
 
 run("cp-this.script",1,serv)
 
 for (var j = 0; j < iters; ++j) {
-        exec("target-weaken.script", serv,1,target,j);
-        exec("grow-target.script", serv,1,target,j);
-        exec("target-hack.script", serv,1,target,j);
+        exec("target-weaken.script", serv, threadNum, target, j);
+        exec("target-grow.script", serv, threadNum, target, j);
+        exec("target-hack.script", serv, threadNum, target, j);
     }

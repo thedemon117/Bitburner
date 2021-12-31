@@ -1,6 +1,7 @@
-// interogate server v1
+// interogate server v2
 // Inspired by https://www.youtube.com/watch?v=zPBdjTAB254
-target = args[0];
+// run this with --tail so you can see output
+var target = args[0];
 
 print ("Target Server: " + target);
 
@@ -10,6 +11,7 @@ secThresh = getServerMinSecurityLevel(target);
 currentSec = getServerSecurityLevel(target);
 targetMaxRam = getServerMaxRam(target);
 targetUsedRam = getServerUsedRam(target);
+availableRam = targetMaxRam - targetUsedRam;
 t_hackTime = getHackTime(target);
 t_growTime = getGrowTime(target);
 t_weakenTime = getWeakenTime(target);
@@ -21,6 +23,7 @@ t_weakenTime = getWeakenTime(target);
 //print ("Current Security level: " + currentSec);
 //print ("Max RAM: "+ targetMaxRam + "GB");
 //print ("Used RAM: "+ targetUsedRam + "GB");
+print ("Useable RAM: " + availableRam + "GBs")
 print ("Grow Time: " + t_growTime/6000 + "sec");
 print ("Weaken Time: " + t_weakenTime/6000 + "sec");
 print ("Hack Time: " + t_hackTime/6000 + "sec");
