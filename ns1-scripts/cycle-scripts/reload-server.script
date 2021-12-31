@@ -14,7 +14,7 @@ var threadNum = args[2];
 var iters = (getServerMaxRam(serv) - getServerUsedRam(serv))/9;
 
 // Thanks for the array TheDroidYouAreLookingFor
-var hackTools = ["target-weaken.script","target-grow.script","target-hack.script"];
+var files = ["target-weaken.script","target-grow.script","target-hack.script"];
 
 // Clears up all running scripts on the server
 // Don't run on home - it kills the script before running the loop
@@ -22,7 +22,7 @@ killall(serv);
 
 // Secure copy the tools in the array above to the intended server,
 // to be used in the loop below
-scp(hackTools,1,serv);
+scp(files, serv);
 
 // This loop executes multiple instances of the grow weaken hack scripts
 // on the specified server *against* the specified target
