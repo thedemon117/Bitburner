@@ -11,7 +11,7 @@ var threadNum = args[2];
 
 // Math to determine how many iterations of the scripts can be run to use
 // all ram on the server *doing* the attacking
-var iters = (getServerMaxRam(serv) - getServerUsedRam(serv))/9;
+var iters = (getServerMaxRam(serv) - getServerUsedRam(serv))/5.4;
 
 // Thanks for the array TheDroidYouAreLookingFor
 var files = ["target-weaken.script","target-grow.script","target-hack.script"];
