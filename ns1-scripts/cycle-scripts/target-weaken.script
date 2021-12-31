@@ -1,4 +1,6 @@
-var target = args[0];
+var target = args[0];       // Set your target
+
+// This is to know if you're 
 var securityThresh = getServerMinSecurityLevel(target) + 5;
 
 while(true) {
@@ -7,5 +9,4 @@ while(true) {
         weaken(target);
     } else {
         // sleep to weaken again
-        sleep(1000);
     }

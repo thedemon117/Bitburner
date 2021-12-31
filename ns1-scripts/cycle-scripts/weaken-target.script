@@ -4,6 +4,7 @@ var threadNum = args[2];        //Threads dedicated to the script
 
 // Used to calculate the max number of scripts to run
 // in available RAM
+// target-weaken.script takes 1.90 GB of RAM 
 var iters = (getServerMaxRam(serv) - getServerUsedRam(serv))/1.96;
 
 // Make sure the weak script is on the intended server
