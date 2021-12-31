@@ -16,6 +16,9 @@ var iters = (getServerMaxRam(serv) - getServerUsedRam(serv))/9;
 // Thanks for the array TheDroidYouAreLookingFor
 var hackTools = ["target-weaken.script","target-grow.script","target-hack.script"];
 
+// Clears up all running scripts on the server
+killall(serv);
+
 // Secure copy the tools in the array above to the intended server,
 // to be used in the loop below
 scp(hackTools,1,serv);
@@ -23,8 +26,10 @@ scp(hackTools,1,serv);
 // This loop executes multiple instances of the grow weaken hack scripts
 // on the specified server *against* the specified target
 // It should use all the ram avialable (or close to)
-for (var j = 0; j < iters; ++j) {
+    for (var j = 0; j < iters; ++j) {
         exec("target-weaken.script", serv, threadNum, target, j);
+        exec("target-weaken.script", serv, threadNum, target, j + "a");
         exec("target-grow.script", serv, threadNum, target, j);
+        exec("target-grow.script", serv, threadNum, target, j + "a");
         exec("target-hack.script", serv, threadNum, target, j);
     }
