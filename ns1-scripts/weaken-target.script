@@ -1,9 +1,15 @@
-// Defines the "target server", which is the server
-// by passing the first agrument to it - hack-target.script [server name]
-var target = args[0]
-var sleep_time = args[1]
-// Infinite loop that continously hacks/grows/weakens the target server
-while(true) {
-        weaken(target);
-        sleep(sleep_time);
+var serv = args[0];             //server the script will run on
+var target = args[1];           //target server to be weakened
+var threadNum = args[2];        //Threads dedicated to the script
+
+// Used to calculate the max number of scripts to run
+// in available RAM
+var iters = (getServerMaxRam(serv) - getServerUsedRam(serv))/1.96;
+
+// Make sure the weak script is on the intended server
+run("cp-this.script",1,serv);
+
+// Loop to execute the scripts
+for (var j = 0; j < iters; ++j) {
+        exec("target-weaken.script", serv, threadNum, target, j);
 }
