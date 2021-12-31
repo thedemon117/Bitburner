@@ -29,4 +29,5 @@ scp(hackTools,1,serv)
         exec("target-grow.script", serv, threadNum, target, j);
         exec("target-grow.script", serv, threadNum, target, j + "a");
         exec("target-hack.script", serv, threadNum, target, j);
+    }
     
