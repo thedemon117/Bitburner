@@ -1,0 +1,7 @@
+var target = args[0];
+
+scp("target-grow.script",target);
+scp("target-weaken.script",target);
+scp("target-hack.script",target);
+scp("hack-cycle.script",target);
+scp("soften-target.script",target)
