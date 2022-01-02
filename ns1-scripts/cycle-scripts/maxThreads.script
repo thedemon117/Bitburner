@@ -1,0 +1,35 @@
+// Specify the server the scripts are to be run on
+var serv = args[0];
+
+// Specify server the scripts will be run against - attack
+var target = args[1];
+
+killall(serv)
+
+// Determine available RAM
+
+// FreeRam/3 = MaxThreadsPerScript
+// MaxThreads/3
+
+var script_ram = getScriptRam("target-weaken.script") + getScriptRam("target-grow.script") + getScriptRam("target-hack.script");
+
+var maxThreads = parseInt(getServerMaxRam(serv)/script_ram);
+
+// Thanks for the array TheDroidYouAreLookingFor
+var files = ["target-weaken.script","target-grow.script","target-hack.script"];
+
+// Secure copy the tools in the array above to the intended server,
+// to be used in the loop below
+scp(files, serv);
+
+// This loop executes multiple instances of the grow weaken hack scripts
+// on the specified server *against* the specified target
+// It should use all the ram avialable (or close to)
+
+//target-weaken = 1.95GB
+//target-grow   = 1.75GB
+//target-hack   = 1.70
+
+exec("target-weaken.script", serv, maxThreads, target);
+exec("target-grow.script", serv, maxThreads, target);
+exec("target-hack.script", serv, maxThreads, target)
