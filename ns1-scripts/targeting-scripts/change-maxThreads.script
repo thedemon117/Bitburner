@@ -1,0 +1,59 @@
+//servernames
+var target = args[0];
+
+var server_list =   [/*"foodnstuff",
+                    "sigma-cosmetics",
+                    "joesguns",
+                    "hong-fang-tea",
+                    "nectar-net",
+                    "harakiri-sushi",
+                    "global-pharm",*/
+                    "aevum-police",
+                    "max-hardware",
+                    "neo-net",
+                    "iron-gym",
+                    "zer0",
+                    "phantasy",
+                    "omega-net",
+                    "millenium-fitness",
+                    "I.I.I.I",
+                    "netlink",
+                    "univ-energy",
+                    "the-hub", 
+                    "catalyst",
+                    "silver-helix",
+                    "rho-construction",
+                    "avmnite-02h",
+                    "unitalife",
+                    "omnia",
+                    "rothman-uni",
+                    "lexo-corp",
+                    "alpha-ent",
+                    "zb-institute",
+                    "solaris",
+                    "summit-uni"];
+
+
+//Change target in script, killing editing script and redploying
+for (var i = 0; i < server_list.length; ++i) {
+    var serv = server_list[i];
+
+    killall(serv);
+
+    // Math to determine how many iterations of the scripts can be run to use
+    // all ram on the server *doing* the attacking
+
+    // Determine available RAM
+    var maxThreads = parseInt(getServerMaxRam(serv)/5.4);
+
+    var files = ["target-weaken.script","target-grow.script","target-hack.script"];    
+    scp(files, serv);
+    // Thanks for the array TheDroidYouAreLookingFor
+
+    exec("target-weaken.script", serv, maxThreads, target);
+    exec("target-grow.script", serv, maxThreads, target);
+    exec("target-hack.script", serv, maxThreads + 2, target);
+
+    var freeRam = (getServerMaxRam(serv) - getServerUsedRam(serv));
+    print("Free RAM: ~"+ freeRam + "GBs");
+}
