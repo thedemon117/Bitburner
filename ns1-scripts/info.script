@@ -12,6 +12,7 @@ currentSec = getServerSecurityLevel(target);
 targetMaxRam = getServerMaxRam(target);
 targetUsedRam = getServerUsedRam(target);
 availableRam = targetMaxRam - targetUsedRam;
+t_hackLevel = getServerRequiredHackingLevel(target);
 t_hackTime = getHackTime(target);
 t_growTime = getGrowTime(target);
 t_weakenTime = getWeakenTime(target);
