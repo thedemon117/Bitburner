@@ -1,8 +1,7 @@
-// This is currently broken and throwing an error about fileExists
-
 /** @param {NS} ns **/
 export async function cleanFS(ns, serv) {
-    var old_scripts = ['target-hack.script','target-grow.script','target-weaken.script','soften-target.script'];
+    var old_scripts = ['target-hack.script','target-grow.script','target-weaken.script',
+                        'soften-target.script','grow-target.script','hack-cycle.script'];
 
     for (var i = 0; i < old_scripts.length; i++) {
             var x =  (ns.fileExists(old_scripts[i], serv));
@@ -13,9 +12,12 @@ export async function cleanFS(ns, serv) {
         } 
 }
 
-export async function hackFiles(ns, serv) {
-    var theScripts = ['hack.js','grow.js','weaken.js']
-    await ns.scp(theScripts, "home", serv);
+export async function sendIT(ns, serv) {
+    var theScripts = ['hack.js','grow.js','weaken.js'];
+    
+    for (var i = 0; i < theScripts.length; i++) {
+        await ns.scp(theScripts[i], "home", serv);
+    }
 }
 
 
@@ -29,13 +31,9 @@ export async function main(ns) {
     //if ns.getRunningScript(t_script) == true {}
     // find script by pid with args?
 
-    cleanFS(serv);
-    await hackFiles(serv);
-
-    var maxThreads = (ns.getServerMaxRam(serv)/ns.getScriptRam(t_script));
-    
-    ns.print("MaxThreads: "+ maxThreads);
+    cleanFS(ns, serv);
+    await sendIT(ns, serv);
 
     ns.exec(t_script, serv, t_threads, target);
-
+    ns.tprint("Max ram: "+ns.getServerMaxRam(serv)+" used: "+ns.getServerUsedRam(serv));
 }
