@@ -10,7 +10,7 @@ export async function main(ns) {
     cleanFS(ns, serv);
     await sendIT(ns, serv);
 
-    //var maxThreads = (ns.getServerMaxRam(serv)/ns.getScriptRam(t_script));
+    //let maxThreads = (ns.getServerMaxRam(serv)/ns.getScriptRam(t_script));
     const mThreads = maxThreads(ns, serv, t_script);
 
     ns.exec(t_script, serv, mThreads, target);

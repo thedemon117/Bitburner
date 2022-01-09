@@ -15,13 +15,13 @@ export function allTheMonies(ns, starget) {
         requiredHackingSkill,
     } = target;
 
-    //var maxMoney = ns.getServerMaxMoney(starget);
-    //var availMoney = ns.getServerMoneyAvailable(starget);
-    //var h_analyze = ns.hackAnalyze(starget);
-    var curSecLevel = ns.getServerSecurityLevel(starget);
-    var minSecLevel = ns.getServerMinSecurityLevel(starget);
-    var moneyMax1 = ns.nFormat(moneyMax, '$0,0.00');
-    var moneyAvailble1 = ns.nFormat(moneyAvailable, '$0,0.00');
+    //let maxMoney = ns.getServerMaxMoney(starget);
+    //let availMoney = ns.getServerMoneyAvailable(starget);
+    //let h_analyze = ns.hackAnalyze(starget);
+    let curSecLevel = ns.getServerSecurityLevel(starget);
+    let minSecLevel = ns.getServerMinSecurityLevel(starget);
+    let moneyMax1 = ns.nFormat(moneyMax, '$0,0.00');
+    let moneyAvailble1 = ns.nFormat(moneyAvailable, '$0,0.00');
 
     ns.tprint(moneyMax1 +" Max");
     ns.tprint(moneyAvailble1 +" Availble");
@@ -38,10 +38,10 @@ export function allTheMonies(ns, starget) {
 
 /** @param {NS} ns **/
 export async function allHackStuff(ns, starget, monies) {
-    //var h_analyze = Math.floor(1/ns.hackAnalyze(starget));
-    //var h_analyze = ns.hackAnalyze(starget);
-    //var monies = parseInt(monies);
-    var h_analyzeThreads = ns.hackAnalyzeThreads(starget, monies);
+    //let h_analyze = Math.floor(1/ns.hackAnalyze(starget));
+    //let h_analyze = ns.hackAnalyze(starget);
+    //let monies = parseInt(monies);
+    let h_analyzeThreads = ns.hackAnalyzeThreads(starget, monies);
 
     //ns.hackAnalyze(
 
@@ -64,7 +64,7 @@ export function money_server_list(ns) {
 }
 
 export function maxThreads(ns, serv, t_script) {
-    var maxThreads = (ns.getServerMaxRam(serv)/ns.getScriptRam(t_script));
+    let maxThreads = (ns.getServerMaxRam(serv)/ns.getScriptRam(t_script));
     
     return maxThreads;
 }
@@ -73,8 +73,8 @@ export function maxThreads(ns, serv, t_script) {
 /** @param {NS} ns **/
 export async function main(ns) {
     // Give this beast a target to get info from
-    var target = ns.args[0];
-    var monies = ns.args[1];
+    let target = ns.args[0];
+    let monies = ns.args[1];
 
     // Grab Money info using function
     allTheMonies(ns, target);

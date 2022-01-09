@@ -1,10 +1,10 @@
 /** @param {NS} ns **/
 export async function cleanFS(ns, serv) {
-    var old_scripts = ['target-hack.script','target-grow.script','target-weaken.script',
+    let old_scripts = ['target-hack.script','target-grow.script','target-weaken.script',
                         'soften-target.script','grow-target.script','hack-cycle.script'];
 
-    for (var i = 0; i < old_scripts.length; i++) {
-            var x =  (ns.fileExists(old_scripts[i], serv));
+    for (let i = 0; i < old_scripts.length; i++) {
+            let x =  (ns.fileExists(old_scripts[i], serv));
             
             if (x) { 
                 rm(old_scripts[i]);
@@ -13,9 +13,9 @@ export async function cleanFS(ns, serv) {
 }
 
 export async function sendIT(ns, serv) {
-    var theScripts = ['hack.js','grow.js','weaken.js'];
+    let theScripts = ['hack.js','grow.js','weaken.js'];
     
-    for (var i = 0; i < theScripts.length; i++) {
+    for (let i = 0; i < theScripts.length; i++) {
         await ns.scp(theScripts[i], "home", serv);
     }
 }
