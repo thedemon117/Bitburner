@@ -30,6 +30,7 @@ export async function main(ns) {
         if (availMonies >= (maxMonies * .9)) {
             ns.killall(serv);
             ns.exec("sim-hack.js", serv, hThreads, target); // this should be a personal server to throw hack threads at the target
+            await ns.sleep(grow_time + 1000);
         } else {
             ns.killall(serv);
             ns.exec("sim-grow.js", serv, gThreads, target); // this should be a personal server to throw hack threads at the target
@@ -38,7 +39,7 @@ export async function main(ns) {
             // need to write and scp with sendIT a simple grow script
             //let this loop till money is to a certain point, then hack
         }
-       
+        await ns.sleep(1000); 
     }
 
 
